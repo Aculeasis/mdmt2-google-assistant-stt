@@ -29,7 +29,7 @@ git clone https://github.com/Aculeasis/mdmt2-google-assistant-stt
 
 И перезапустить терминал.
 
-## Настройки
+## Настройка
 **settings.ini**
 ```ini
 [settings]
