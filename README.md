@@ -2,9 +2,10 @@
 Использует Google Assistant Service в качестве STT провайдера. Имя провайдера: `google-assistant-stt`
 
 # Установка
-Если [mdmt2-google-assistant](https://github.com/Aculeasis/mdmt2-google-assistant) уже был успешно установлен,
+Если [mdmt2-google-assistant](https://github.com/Aculeasis/mdmt2-google-assistant) был успешно установлен,
  достаточно клонировать реп:
 ```bash
+cd mdmTerminal2/src/plugins
 git clone https://github.com/Aculeasis/mdmt2-google-assistant-stt
 ```
 Для использования другой модели, вместо `model_id` и `project_id`, можно добавить `model_id_stt` и `project_id_stt`.
