@@ -23,7 +23,7 @@ from google.assistant.embedded.v1alpha2 import embedded_assistant_pb2, embedded_
 
 import logger
 from languages import LANG_CODE
-from lib import STT
+from lib.STT import BaseSTT
 
 NAME = 'google-assistant-stt'
 API = 1
@@ -35,16 +35,16 @@ DEFAULT_GRPC_DEADLINE = 60 * 3 + 5
 
 
 class Main:
-    def __init__(self, cfg, log, **_):
+    def __init__(self, cfg, log, owner):
         self.cfg = cfg
         self.log = log
 
         self.disable = True
         self._assistant = None
 
-        if self.cfg.gt('listener', 'stream_recognition') and self._ga_init():
+        if self.cfg.gt('listener', 'stream_recognition') and self._ga_init() and \
+                owner.add_stt_provider('google-assistant-stt', self.stt_wrapper):
             self.disable = False
-            STT.PROVIDERS['google-assistant-stt'] = self.stt_wrapper
 
     def start(self):
         pass
@@ -213,7 +213,7 @@ class STTAssistant:
         return text
 
 
-class GoogleAssistantSTT(STT.BaseSTT):
+class GoogleAssistantSTT(BaseSTT):
     def __init__(self, assist, audio_data):
         ext = 'pcm'
         rate = 16000
