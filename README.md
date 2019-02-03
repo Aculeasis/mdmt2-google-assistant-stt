@@ -14,7 +14,6 @@ git clone https://github.com/Aculeasis/mdmt2-google-assistant-stt
 
 - [Configure the Actions Console project and the Google account](https://developers.google.com/assistant/sdk/guides/service/python/embed/config-dev-project-and-account)
 - [Register a new device model and download the client secrets file](https://developers.google.com/assistant/sdk/guides/service/python/embed/register-device)
-- Включить `Google Assistant API` для проекта.
 
 ```bash
 mdmTerminal2/env/bin/python -m pip install --upgrade google-auth-oauthlib[tool] google-assistant-grpc
