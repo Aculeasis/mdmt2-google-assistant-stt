@@ -89,7 +89,7 @@ class Main:
             return None
         data = {
             'model_id': credentials.pop('model_id_stt', None) or credentials.pop('model_id', None),
-            'project_id': credentials.pop('project_id_stt', None) or credentials.pop('project_id', None)
+            'project_id': credentials.pop('project_id', None)
         }
         for key, val in data.items():
             if not isinstance(val, str) or not val:

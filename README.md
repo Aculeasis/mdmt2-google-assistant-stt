@@ -8,8 +8,6 @@
 cd mdmTerminal2/src/plugins
 git clone https://github.com/Aculeasis/mdmt2-google-assistant-stt
 ```
-Для использования другой модели, вместо `model_id` и `project_id`, можно добавить `model_id_stt` и `project_id_stt`.
-
 ---
 
 - [Configure the Actions Console project and the Google account](https://developers.google.com/assistant/sdk/guides/service/python/embed/config-dev-project-and-account)
