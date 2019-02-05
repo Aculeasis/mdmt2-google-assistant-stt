@@ -38,7 +38,7 @@ git clone https://github.com/Aculeasis/mdmt2-google-assistant-stt
 providerstt = google-assistant-stt
 
 [listener]
-# GAS способен распознавать речь только в режиме реального времени.
+# GAS способен распознавать речь только в режиме реального времени. В противном случае он не будет запущен.
 stream_recognition = on
 # Он сам определяет окончание фраз, лучше не ставить слишком низкое значение.
 silent_multiplier = 0.7
