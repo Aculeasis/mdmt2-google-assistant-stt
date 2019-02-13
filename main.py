@@ -26,7 +26,7 @@ from languages import LANG_CODE
 from lib.STT import BaseSTT
 
 NAME = 'google-assistant-stt'
-API = 1
+API = 665
 
 ASSISTANT_API_ENDPOINT = 'embeddedassistant.googleapis.com'
 GA_CONFIG = 'google_assistant_stt_config'
