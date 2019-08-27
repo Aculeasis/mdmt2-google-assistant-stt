@@ -42,8 +42,7 @@ class Main:
         self.disable = True
         self._assistant = None
 
-        if self.cfg.gt('listener', 'stream_recognition') and self._ga_init() and \
-                owner.add_stt_provider('google-assistant-stt', self.stt_wrapper):
+        if self._ga_init() and owner.add_stt_provider('google-assistant-stt', self.stt_wrapper):
             self.disable = False
 
     def start(self):
